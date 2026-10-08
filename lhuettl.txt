@@ -1,2 +1,3 @@
 Mein Name ist Leonie Hüttl.
 Ich lerne Git.
+Ich lerne auch, wie man branches in Git verwendet.
