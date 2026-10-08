@@ -1,0 +1,85 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Leo\Git\20261008> git add .
+PS C:\Users\Leo\Git\20261008> git commit -m "textdatei erstellt"
+[main (root-commit) b325763] textdatei erstellt
+ Committer: Leo <leo@huettl.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+ create mode 100644 lhuettl.txt
+PS C:\Users\Leo\Git\20261008> git checkout -b feature/lhuettl
+Switched to a new branch 'feature/lhuettl'
+PS C:\Users\Leo\Git\20261008> git checkout feature/lhuettl
+Already on 'feature/lhuettl'
+PS C:\Users\Leo\Git\20261008> git add .
+PS C:\Users\Leo\Git\20261008> git commit -m "neue Zeile hinzugefügt"
+[feature/lhuettl 5f1f015] neue Zeile hinzugefügt
+ Committer: Leo <leo@huettl.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\Leo\Git\20261008> git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Leo\Git\20261008> git merge feature/lhuettl
+Updating b325763..5f1f015
+Fast-forward
+ lhuettl.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\Leo\Git\20261008> git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+PS C:\Users\Leo\Git\20261008> git log
+commit 5f1f015d7611ef04442d3ae9eab3d607196fc85c (HEAD -> main, feature/lhuettl)
+Author: Leo <leo@huettl.local>
+Date:   Thu Oct 8 08:06:44 2026 +0200
+
+    neue Zeile hinzugefügt
+
+commit b325763c85e15fb2d0e6d691c0157b9aaf547e27
+Author: Leo <leo@huettl.local>
+Date:   Thu Oct 8 08:03:54 2026 +0200
+
+    textdatei erstellt
+PS C:\Users\Leo\Git\20261008> git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 553 bytes | 553.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/lhuettl25/20261008.git
+ * [new branch]      main -> main
+PS C:\Users\Leo\Git\20261008>
+
+
+
+
+
+Ein Merge Konflikt ist wenn Git nicht weiß welche Änderung stimmt und welche nicht und entsteht wenn zwei Änderungen auf der gleichen Branch passieren. 
