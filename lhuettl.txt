@@ -1,0 +1,2 @@
+Mein Name ist Leonie Hüttl.
+Ich lerne Git.
